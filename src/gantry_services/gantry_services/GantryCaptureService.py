@@ -1,24 +1,24 @@
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger
-from gantry_lidar_interfaces.srv import Capture
+from gantry_lidar_interfaces.srv import Capture, DownloadName, DownloadTimeRange, DeleteName, DeleteTimeRange
 import subprocess # For running ROS bag commands
 import signal # For sending shutdown sig
 import shutil
 
 from datetime import datetime # For parsing by time range
-
+from pathlib import Path
 import json
 import time
 
-DATA_DIR = "~/RoSE_Bags"
+DATA_DIR = Path.home() / "RoSE_Bags"
 TIME_STR = "%Y-%m-%dT%H-%M-%S"
 
 def start_http_server():
     subprocess.Popen([
         "python3", "-m", "http.server", "8000",
         "--directory", str(DATA_DIR),
-        "--bind", "0.0.0.0"
+        "--bind", "192.168.2.4"
     ])
 
 def parse_time(timestr):
@@ -35,12 +35,12 @@ class GantryCaptureService(Node):
         self.create_service(Capture, 'capture', self.capture_callback)
 
         # Download
-        self.create_service(Capture, 'download/name', self.download_name_callback)
-        self.create_service(Capture, 'download/timeRange', self.download_time_range_callback)
+        self.create_service(DownloadName, 'download/name', self.download_name_callback)
+        self.create_service(DownloadTimeRange, 'download/timeRange', self.download_time_range_callback)
 
         # Delete
-        self.create_service(Capture, 'delete/name', self.delete_name_callback)
-        self.create_service(Capture, 'delete/timeRange', self.delete_time_range_callback)
+        self.create_service(DeleteName, 'delete/name', self.delete_name_callback)
+        self.create_service(DeleteTimeRange, 'delete/timeRange', self.delete_time_range_callback)
         
         # Start HTTP server
         start_http_server()
@@ -60,34 +60,37 @@ class GantryCaptureService(Node):
         - sensors: list of str names of sensors
         - outname: name of bag to save. bag will be saved as "outname_timestamp"
         """
+        self.get_logger().info(str(DATA_DIR))
         try:
-            print(request.data)
-            req_data = json.loads(request.data)
-            duration = req_data.get("duration", 10.0)
-            sensors = req_data.get("sensors", [])
-            outname = req_data.get("outname", "")
+            #self.get_logger().info(request)
+            #req_data = json.loads(request.data)
+            duration = request.duration #req_data.get("duration", 10.0)
+            sensors = request.sensors #req_data.get("sensors", [])
+            outname = request.outname #req_data.get("outname", "")
 
             # Match directories like: "outname_*"
-            matches = list(DATA_DIR.glob(f"{outname}_*"))
+            #matches = list(DATA_DIR.glob(f"{outname}_*"))
             
             # If file exists 
-            if matches:
-                self.get_logger().info(f"Filename already exists: {self.outname}")
-                response.data = json.dumps({"status": "ERROR", "reason": "filename already exists"})
-                return response
+            # if matches:
+            #     self.get_logger().info(f"Filename already exists: {self.outname}")
+            #     response.outdata = json.dumps({"status": "ERROR", "reason": "filename already exists"})
+            #     return response
             
             # Format filename
             timestamp = datetime.now().strftime(TIME_STR)
             self.filename = f"{outname}_{timestamp}"
 
             # Set Topics
+            topics = []
             for sensor in sensors:
-                if sensor == "l515_center" or sensor == "l515_west" or sensor == "l515_east":
-                    topics += "/"+sensor+"/depth/color/points"
+                if (sensor == "l515_center") or (sensor == "l515_west") or (sensor == "l515_east"):
+                    topics.append("/"+sensor+"/depth/color/points")
 
             # Capture Bag
-            self.get_logger().info(f"Capturing data: {duration}s from {sensors}, output: {outname}")
-            cmd = ['ros2', 'bag', 'record', '-o', self.filename] + topics
+            bag_path = (DATA_DIR / self.filename).resolve()
+            self.get_logger().info(f"Capturing data: {duration}s from {topics}, output: {str(bag_path)}")
+            cmd = ['ros2', 'bag', 'record', '-o', str(bag_path)] + topics
             self.record_process = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             self.get_logger().info(f"Started recording bag: {self.filename}")
 
@@ -101,14 +104,14 @@ class GantryCaptureService(Node):
             self.get_logger().info(f"Stopped recording bag: {self.filename}")
            
             # Zip bag
-            self.get_logger().info(f"Making .zip archive: {self.filename}.zip")
-            shutil.make_archive(self.filename, 'zip', DATA_DIR / self.filename)
+            #self.get_logger().info(f"Making .zip archive: {self.filename}.zip")
+            #shutil.make_archive(self.filename, 'zip', DATA_DIR / self.filename)
 
             # Delete original folder
-            self.get_logger().info(f"Deleting original: {self.filename}")
-            shutil.rmtree(DATA_DIR / self.filename)
+            #self.get_logger().info(f"Deleting original: {self.filename}")
+            #shutil.rmtree(DATA_DIR / self.filename)
 
-            response.data = json.dumps({
+            response.outdata = json.dumps({
                 "status": "ACK",
                 "duration": duration,
                 "sensors": sensors,
@@ -116,7 +119,7 @@ class GantryCaptureService(Node):
             })
 
         except Exception as e:
-            response.data = json.dumps({"status": "ERROR", "reason": str(e)})
+            response.outdata = json.dumps({"status": "ERROR", "reason": str(e)})
         return response
     
     def download_name_callback(self, request, response):
@@ -124,28 +127,28 @@ class GantryCaptureService(Node):
         Download bags by name. All bags with matching name will be downloaded (although there should only be one)
         """
         try:
-            data = json.loads(request.data)
-            outname = data.get("name")
+            #data = json.loads(request.data)
+            outname = request.name
 
             # Get matches (Should only have one)
-            matches = sorted(DATA_DIR.glob(f"{outname}_*"), reverse=True)
+            matches = sorted(DATA_DIR.glob(f"{outname}"), reverse=True)
             if not matches:
-                response.data = json.dumps({"success": False, "error": "Not found"})
+                response.outdata = json.dumps({"success": False, "error": "Not found"})
                 return response
 
             # Figure out what the http path to the zip is
             folder = matches[0].name
-            ip = self.get_ip()
+            ip = "192.168.2.4"
             url = f"http://{ip}:8000/{folder}.zip"
 
             # Return the zip path for wget by client
-            response.data = json.dumps({
+            response.outdata = json.dumps({
                 "success": True,
                 "url": url
             })
 
         except Exception as e:
-            response.data = json.dumps({"success": False, "error": str(e)})
+            response.outdata = json.dumps({"success": False, "error": str(e)})
         return response
 
     def download_time_range_callback(self, request, response):
@@ -154,13 +157,13 @@ class GantryCaptureService(Node):
         Time stamp should be formated like "yyyy-mm-ddThh-mm-ss" in 24hr time
         """
         try:
-            data = json.loads(request.data)
-            start = data.get("start")
-            end = data.get("end")
+            #data = json.loads(request.data)
+            start = request.start #data.get("start")
+            end = request.end #data.get("end")
             # EXECUTE DOWNLOAD (DO THIS IN A BATCH, ZIP ZIPs TOGETHER)
-            response.data = f"Downloaded files from {start} to {end}"
+            response.outdata = f"Downloaded files from {start} to {end}"
         except Exception as e:
-            response.data = f"Error parsing request: {str(e)}"
+            response.outdata = f"Error parsing request: {str(e)}"
         return response
 
     def delete_name_callback(self, request, response):
@@ -168,18 +171,18 @@ class GantryCaptureService(Node):
         Delete bags by name. All bags with matching name will be deleted (although there should only be one)
         """
         try:
-            data = json.loads(request.data)
-            outname = data.get("name")
+            #data = json.loads(request.data)
+            outname = request.name#data.get("name")
             if outname == "":
                 self.get_logger().info(f"Must delete a named file if deleting by name. Delete by time range instead.")
-                response.data = json.dumps({"status": "ERROR", "reason": "Can't delete unnamed file. Delete by time range instead."})
+                response.outdata = json.dumps({"status": "ERROR", "reason": "Can't delete unnamed file. Delete by time range instead."})
                 return response
-            # Match directories like: "outname_*"
-            matches = list(DATA_DIR.glob(f"{outname}_*"))
+            # Match directories like: "outname"
+            matches = list(DATA_DIR.glob(f"{outname}"))
             
             # No matches
             if not matches:
-                response.data = json.dumps({
+                response.outdata = json.dumps({
                     "success": False,
                     "error": f"No bag found with name '{outname}'"
                 })
@@ -192,13 +195,13 @@ class GantryCaptureService(Node):
                     shutil.rmtree(path)
                     deleted.append(path.name)
 
-            response.data = json.dumps({
+            response.outdata = json.dumps({
                 "success": True,
                 "deleted": deleted
             })
 
         except Exception as e:
-            response.data = json.dumps({"success": False, "error": str(e)})
+            response.outdata = json.dumps({"success": False, "error": str(e)})
         return response
 
 
@@ -209,9 +212,9 @@ class GantryCaptureService(Node):
         Time stamp should be formated like yyyy-mm-ddThh-mm-ss" in 24hr time
         """
         try:
-            data = json.loads(request.data)
-            start = datetime.strptime(data["start"], TIME_STR)
-            end = datetime.strptime(data["end"], TIME_STR)
+            #data = json.loads(request.data)
+            start = datetime.strptime(request.start, TIME_STR)
+            end = datetime.strptime(request.end, TIME_STR)
 
             deleted = []
             for path in DATA_DIR.iterdir():
@@ -227,13 +230,13 @@ class GantryCaptureService(Node):
                 except Exception:
                     continue
 
-            response.data = json.dumps({
+            response.outdata = json.dumps({
                 "success": True,
                 "deleted": deleted
             })
 
         except Exception as e:
-            response.data = json.dumps({"success": False, "error": str(e)})
+            response.outdata = json.dumps({"success": False, "error": str(e)})
         return response
 
 

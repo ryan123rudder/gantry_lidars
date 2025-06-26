@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces/rosidl_generator_py/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c.so" "TARGETS" "gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.12/site-packages/gantry_lidar_interfaces")

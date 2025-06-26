@@ -1,6 +1,0 @@
-{
-  "package_name": "gantry_lidar_interfaces",
-  "non_idl_tuples": [
-    "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidar_interfaces:srv/Capture.srv"
-  ]
-}

@@ -26,6 +26,10 @@ endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
  "srv/Capture.srv"
+ "srv/DeleteName.srv"
+ "srv/DeleteTimeRange.srv"
+ "srv/DownloadName.srv"
+ "srv/DownloadTimeRange.srv"
 )
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()

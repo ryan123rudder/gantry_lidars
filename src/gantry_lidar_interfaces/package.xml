@@ -4,7 +4,7 @@
   <name>gantry_lidar_interfaces</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="mkreed@mines.edu">gantry_lattepanda</maintainer>
+  <maintainer email="ryanmanley@mines.edu">Ryan Manley</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

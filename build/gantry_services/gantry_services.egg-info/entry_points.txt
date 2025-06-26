@@ -1,2 +1,0 @@
-[console_scripts]
-gantry_capture_service = gantry_services.GantryCaptureService:main
