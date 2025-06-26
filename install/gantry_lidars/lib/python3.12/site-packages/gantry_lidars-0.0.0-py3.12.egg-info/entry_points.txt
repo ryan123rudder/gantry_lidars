@@ -1,0 +1,2 @@
+[console_scripts]
+gantry_lidars = gantry_lidars.PointCloudMerger:main

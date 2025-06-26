@@ -1,0 +1,505 @@
+[0.000000] (-) TimerEvent: {}
+[0.002415] (-) JobUnselected: {'identifier': 'gantry_lidars'}
+[0.002717] (-) JobUnselected: {'identifier': 'gantry_services'}
+[0.006848] (gantry_lidar_interfaces) JobQueued: {'identifier': 'gantry_lidar_interfaces', 'dependencies': OrderedDict()}
+[0.006942] (gantry_lidar_interfaces) JobStarted: {'identifier': 'gantry_lidar_interfaces'}
+[0.063821] (gantry_lidar_interfaces) JobProgress: {'identifier': 'gantry_lidar_interfaces', 'progress': 'cmake'}
+[0.065989] (gantry_lidar_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidar_interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces'], 'cwd': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gantry_lattepanda', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/m3_robotics/gantry_control/ros/install/gantry_interfaces/lib:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera/lib:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs/lib:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gantry_lattepanda', 'OLDPWD': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2111', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install:/home/gantry_lattepanda/realsense-ros-4.51.1/install:/home/gantry_lattepanda/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gantry_lattepanda', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'gantry_lattepanda', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aspect-LattePanda:@/tmp/.ICE-unix/2073,unix/aspect-LattePanda:/tmp/.ICE-unix/2073', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b720cfc4_f4a5_4a60_ad16_24bddde772ef', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LD_PRELOAD': '', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.VBUJ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop:/m3_robotics/gantry_control/ros/install/gantry_interfaces:/m3_robotics/gantry_control/ros/install/gantry_cameras:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_description:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs:/home/gantry_lattepanda/ros2_ws/install/realsense2_description:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop/lib/python3.12/site-packages:/m3_robotics/gantry_control/ros/install/gantry_interfaces/lib/python3.12/site-packages:/m3_robotics/gantry_control/ros/install/gantry_cameras/lib/python3.12/site-packages:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop:/m3_robotics/gantry_control/ros/install/gantry_interfaces:/m3_robotics/gantry_control/ros/install/gantry_cameras:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_description:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs:/home/gantry_lattepanda/ros2_ws/install/realsense2_description:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099274] (-) TimerEvent: {}
+[0.200251] (-) TimerEvent: {}
+[0.274414] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.300394] (-) TimerEvent: {}
+[0.400782] (-) TimerEvent: {}
+[0.411753] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.469128] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.500925] (-) TimerEvent: {}
+[0.601354] (-) TimerEvent: {}
+[0.705154] (-) TimerEvent: {}
+[0.718587] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.752753] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.753453] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.755591] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.773620] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.805255] (-) TimerEvent: {}
+[0.905991] (-) TimerEvent: {}
+[1.009003] (-) TimerEvent: {}
+[1.044472] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.084085] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.084836] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.087683] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.099424] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.109119] (-) TimerEvent: {}
+[1.209526] (-) TimerEvent: {}
+[1.311645] (-) TimerEvent: {}
+[1.412056] (-) TimerEvent: {}
+[1.512419] (-) TimerEvent: {}
+[1.564153] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.612543] (-) TimerEvent: {}
+[1.712927] (-) TimerEvent: {}
+[1.791322] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.813059] (-) TimerEvent: {}
+[1.913714] (-) TimerEvent: {}
+[1.988049] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.013852] (-) TimerEvent: {}
+[2.026121] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.113993] (-) TimerEvent: {}
+[2.216497] (-) TimerEvent: {}
+[2.298839] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.316689] (-) TimerEvent: {}
+[2.417115] (-) TimerEvent: {}
+[2.440644] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[2.453552] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[2.517247] (-) TimerEvent: {}
+[2.617640] (-) TimerEvent: {}
+[2.718389] (-) TimerEvent: {}
+[2.820910] (-) TimerEvent: {}
+[2.924660] (-) TimerEvent: {}
+[3.025124] (-) TimerEvent: {}
+[3.125556] (-) TimerEvent: {}
+[3.225986] (-) TimerEvent: {}
+[3.326438] (-) TimerEvent: {}
+[3.426869] (-) TimerEvent: {}
+[3.528958] (-) TimerEvent: {}
+[3.629363] (-) TimerEvent: {}
+[3.729767] (-) TimerEvent: {}
+[3.830183] (-) TimerEvent: {}
+[3.931259] (-) TimerEvent: {}
+[4.032933] (-) TimerEvent: {}
+[4.133349] (-) TimerEvent: {}
+[4.233756] (-) TimerEvent: {}
+[4.292180] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[4.335765] (-) TimerEvent: {}
+[4.436171] (-) TimerEvent: {}
+[4.538935] (-) TimerEvent: {}
+[4.639885] (-) TimerEvent: {}
+[4.744897] (-) TimerEvent: {}
+[4.847427] (-) TimerEvent: {}
+[4.947854] (-) TimerEvent: {}
+[5.048301] (-) TimerEvent: {}
+[5.148758] (-) TimerEvent: {}
+[5.249158] (-) TimerEvent: {}
+[5.353765] (-) TimerEvent: {}
+[5.454147] (-) TimerEvent: {}
+[5.557122] (-) TimerEvent: {}
+[5.607535] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.657246] (-) TimerEvent: {}
+[5.758301] (-) TimerEvent: {}
+[5.859484] (-) TimerEvent: {}
+[5.962743] (-) TimerEvent: {}
+[6.063131] (-) TimerEvent: {}
+[6.163532] (-) TimerEvent: {}
+[6.263995] (-) TimerEvent: {}
+[6.364407] (-) TimerEvent: {}
+[6.464859] (-) TimerEvent: {}
+[6.565296] (-) TimerEvent: {}
+[6.666149] (-) TimerEvent: {}
+[6.766579] (-) TimerEvent: {}
+[6.866952] (-) TimerEvent: {}
+[6.967350] (-) TimerEvent: {}
+[7.067752] (-) TimerEvent: {}
+[7.068967] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.087947] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[7.167891] (-) TimerEvent: {}
+[7.269024] (-) TimerEvent: {}
+[7.369546] (-) TimerEvent: {}
+[7.451886] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[7.470663] (-) TimerEvent: {}
+[7.571914] (-) TimerEvent: {}
+[7.673138] (-) TimerEvent: {}
+[7.780749] (-) TimerEvent: {}
+[7.887846] (-) TimerEvent: {}
+[7.990450] (-) TimerEvent: {}
+[8.090951] (-) TimerEvent: {}
+[8.191411] (-) TimerEvent: {}
+[8.291870] (-) TimerEvent: {}
+[8.392544] (-) TimerEvent: {}
+[8.493751] (-) TimerEvent: {}
+[8.594229] (-) TimerEvent: {}
+[8.605113] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[8.694354] (-) TimerEvent: {}
+[8.699833] (gantry_lidar_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.701333] (gantry_lidar_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.719066] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Configuring done (8.6s)\n'}
+[8.794498] (-) TimerEvent: {}
+[8.803087] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[8.834725] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces\n'}
+[8.869330] (gantry_lidar_interfaces) CommandEnded: {'returncode': 0}
+[8.871256] (gantry_lidar_interfaces) JobProgress: {'identifier': 'gantry_lidar_interfaces', 'progress': 'build'}
+[8.872968] (gantry_lidar_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gantry_lattepanda', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/m3_robotics/gantry_control/ros/install/gantry_interfaces/lib:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera/lib:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs/lib:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gantry_lattepanda', 'OLDPWD': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2111', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install:/home/gantry_lattepanda/realsense-ros-4.51.1/install:/home/gantry_lattepanda/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gantry_lattepanda', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'gantry_lattepanda', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aspect-LattePanda:@/tmp/.ICE-unix/2073,unix/aspect-LattePanda:/tmp/.ICE-unix/2073', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b720cfc4_f4a5_4a60_ad16_24bddde772ef', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LD_PRELOAD': '', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.VBUJ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop:/m3_robotics/gantry_control/ros/install/gantry_interfaces:/m3_robotics/gantry_control/ros/install/gantry_cameras:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_description:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs:/home/gantry_lattepanda/ros2_ws/install/realsense2_description:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop/lib/python3.12/site-packages:/m3_robotics/gantry_control/ros/install/gantry_interfaces/lib/python3.12/site-packages:/m3_robotics/gantry_control/ros/install/gantry_cameras/lib/python3.12/site-packages:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop:/m3_robotics/gantry_control/ros/install/gantry_interfaces:/m3_robotics/gantry_control/ros/install/gantry_cameras:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_description:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs:/home/gantry_lattepanda/ros2_ws/install/realsense2_description:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[8.894787] (-) TimerEvent: {}
+[9.003866] (-) TimerEvent: {}
+[9.073284] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[9.103995] (-) TimerEvent: {}
+[9.204364] (-) TimerEvent: {}
+[9.306903] (-) TimerEvent: {}
+[9.409906] (-) TimerEvent: {}
+[9.519918] (-) TimerEvent: {}
+[9.544367] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  2%] Built target gantry_lidar_interfaces__rosidl_generator_type_description\n'}
+[9.607133] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_symlink_gantry_lidar_interfaces\n'}
+[9.620043] (-) TimerEvent: {}
+[9.653204] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[9.720176] (-) TimerEvent: {}
+[9.823900] (-) TimerEvent: {}
+[9.929898] (-) TimerEvent: {}
+[10.030278] (-) TimerEvent: {}
+[10.134881] (-) TimerEvent: {}
+[10.241881] (-) TimerEvent: {}
+[10.347183] (-) TimerEvent: {}
+[10.444221] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  5%] Built target gantry_lidar_interfaces__cpp\n'}
+[10.447311] (-) TimerEvent: {}
+[10.547860] (-) TimerEvent: {}
+[10.650940] (-) TimerEvent: {}
+[10.751305] (-) TimerEvent: {}
+[10.852691] (-) TimerEvent: {}
+[10.953066] (-) TimerEvent: {}
+[11.055734] (-) TimerEvent: {}
+[11.148728] (gantry_lidar_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[11.149132] (gantry_lidar_interfaces) StdoutLine: {'line': b'creating gantry_lidar_interfaces.egg-info\n'}
+[11.156169] (-) TimerEvent: {}
+[11.250132] (gantry_lidar_interfaces) StdoutLine: {'line': b'writing gantry_lidar_interfaces.egg-info/PKG-INFO\n'}
+[11.250501] (gantry_lidar_interfaces) StdoutLine: {'line': b'writing dependency_links to gantry_lidar_interfaces.egg-info/dependency_links.txt\n'}
+[11.251255] (gantry_lidar_interfaces) StdoutLine: {'line': b'writing top-level names to gantry_lidar_interfaces.egg-info/top_level.txt\n'}
+[11.251874] (gantry_lidar_interfaces) StdoutLine: {'line': b"writing manifest file 'gantry_lidar_interfaces.egg-info/SOURCES.txt'\n"}
+[11.257220] (-) TimerEvent: {}
+[11.368946] (-) TimerEvent: {}
+[11.469584] (-) TimerEvent: {}
+[11.540711] (gantry_lidar_interfaces) StdoutLine: {'line': b"reading manifest file 'gantry_lidar_interfaces.egg-info/SOURCES.txt'\n"}
+[11.541996] (gantry_lidar_interfaces) StdoutLine: {'line': b"writing manifest file 'gantry_lidar_interfaces.egg-info/SOURCES.txt'\n"}
+[11.569755] (-) TimerEvent: {}
+[11.651510] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_gantry_lidar_interfaces_egg\n'}
+[11.669894] (-) TimerEvent: {}
+[11.689185] (gantry_lidar_interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[11.770025] (-) TimerEvent: {}
+[11.872696] (-) TimerEvent: {}
+[11.975589] (-) TimerEvent: {}
+[12.075953] (-) TimerEvent: {}
+[12.181898] (-) TimerEvent: {}
+[12.282357] (-) TimerEvent: {}
+[12.384050] (-) TimerEvent: {}
+[12.484910] (-) TimerEvent: {}
+[12.585772] (-) TimerEvent: {}
+[12.687498] (-) TimerEvent: {}
+[12.737618] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gantry_lidar_interfaces/srv/detail/capture__description.c.o\x1b[0m\n'}
+[12.789766] (-) TimerEvent: {}
+[12.880105] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gantry_lidar_interfaces/srv/detail/capture__type_support.c.o\x1b[0m\n'}
+[12.889894] (-) TimerEvent: {}
+[12.995908] (-) TimerEvent: {}
+[12.999875] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/gantry_lidar_interfaces/srv/detail/capture__functions.c.o\x1b[0m\n'}
+[13.096050] (-) TimerEvent: {}
+[13.198934] (-) TimerEvent: {}
+[13.233933] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libgantry_lidar_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[13.299076] (-) TimerEvent: {}
+[13.353435] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 20%] Built target gantry_lidar_interfaces__rosidl_generator_c\n'}
+[13.377038] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[13.399195] (-) TimerEvent: {}
+[13.499624] (-) TimerEvent: {}
+[13.600008] (-) TimerEvent: {}
+[13.702939] (-) TimerEvent: {}
+[13.803574] (-) TimerEvent: {}
+[13.905744] (-) TimerEvent: {}
+[14.008160] (-) TimerEvent: {}
+[14.108525] (-) TimerEvent: {}
+[14.208943] (-) TimerEvent: {}
+[14.271758] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/gantry_lidar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/gantry_lidar_interfaces/srv/detail/capture__type_support_c.cpp.o\x1b[0m\n'}
+[14.309095] (-) TimerEvent: {}
+[14.412033] (-) TimerEvent: {}
+[14.515320] (-) TimerEvent: {}
+[14.615776] (-) TimerEvent: {}
+[14.716195] (-) TimerEvent: {}
+[14.816630] (-) TimerEvent: {}
+[14.917051] (-) TimerEvent: {}
+[15.018965] (-) TimerEvent: {}
+[15.123763] (-) TimerEvent: {}
+[15.225861] (-) TimerEvent: {}
+[15.328964] (-) TimerEvent: {}
+[15.431331] (-) TimerEvent: {}
+[15.534766] (-) TimerEvent: {}
+[15.636354] (-) TimerEvent: {}
+[15.738775] (-) TimerEvent: {}
+[15.839774] (-) TimerEvent: {}
+[15.928559] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking CXX shared library libgantry_lidar_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[15.940763] (-) TimerEvent: {}
+[16.044451] (-) TimerEvent: {}
+[16.141440] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 29%] Built target gantry_lidar_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[16.144879] (-) TimerEvent: {}
+[16.171894] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[16.244990] (-) TimerEvent: {}
+[16.345428] (-) TimerEvent: {}
+[16.445860] (-) TimerEvent: {}
+[16.546743] (-) TimerEvent: {}
+[16.648004] (-) TimerEvent: {}
+[16.748585] (-) TimerEvent: {}
+[16.813036] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/gantry_lidar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/gantry_lidar_interfaces/srv/capture__type_support.cpp.o\x1b[0m\n'}
+[16.848719] (-) TimerEvent: {}
+[16.922631] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX shared library libgantry_lidar_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[16.948855] (-) TimerEvent: {}
+[17.020305] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 38%] Built target gantry_lidar_interfaces__rosidl_typesupport_c\n'}
+[17.042690] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[17.049373] (-) TimerEvent: {}
+[17.152083] (-) TimerEvent: {}
+[17.259409] (-) TimerEvent: {}
+[17.360646] (-) TimerEvent: {}
+[17.475265] (-) TimerEvent: {}
+[17.586749] (-) TimerEvent: {}
+[17.687146] (-) TimerEvent: {}
+[17.792342] (-) TimerEvent: {}
+[17.793058] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/gantry_lidar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/gantry_lidar_interfaces/srv/detail/dds_fastrtps/capture__type_support.cpp.o\x1b[0m\n'}
+[17.892485] (-) TimerEvent: {}
+[17.994774] (-) TimerEvent: {}
+[18.097961] (-) TimerEvent: {}
+[18.198391] (-) TimerEvent: {}
+[18.299094] (-) TimerEvent: {}
+[18.402794] (-) TimerEvent: {}
+[18.503200] (-) TimerEvent: {}
+[18.603608] (-) TimerEvent: {}
+[18.704044] (-) TimerEvent: {}
+[18.804465] (-) TimerEvent: {}
+[18.905502] (-) TimerEvent: {}
+[19.007012] (-) TimerEvent: {}
+[19.110126] (-) TimerEvent: {}
+[19.210749] (-) TimerEvent: {}
+[19.312154] (-) TimerEvent: {}
+[19.332216] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library libgantry_lidar_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[19.412339] (-) TimerEvent: {}
+[19.513792] (-) TimerEvent: {}
+[19.522652] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 47%] Built target gantry_lidar_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[19.548602] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[19.614761] (-) TimerEvent: {}
+[19.715171] (-) TimerEvent: {}
+[19.815554] (-) TimerEvent: {}
+[19.916930] (-) TimerEvent: {}
+[20.017385] (-) TimerEvent: {}
+[20.119818] (-) TimerEvent: {}
+[20.220321] (-) TimerEvent: {}
+[20.225805] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/gantry_lidar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/gantry_lidar_interfaces/srv/detail/capture__type_support.cpp.o\x1b[0m\n'}
+[20.320466] (-) TimerEvent: {}
+[20.420953] (-) TimerEvent: {}
+[20.522761] (-) TimerEvent: {}
+[20.623211] (-) TimerEvent: {}
+[20.723619] (-) TimerEvent: {}
+[20.824141] (-) TimerEvent: {}
+[20.926558] (-) TimerEvent: {}
+[21.027001] (-) TimerEvent: {}
+[21.130759] (-) TimerEvent: {}
+[21.231200] (-) TimerEvent: {}
+[21.315884] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libgantry_lidar_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[21.331335] (-) TimerEvent: {}
+[21.431773] (-) TimerEvent: {}
+[21.512351] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 55%] Built target gantry_lidar_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[21.533775] (-) TimerEvent: {}
+[21.542680] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[21.634781] (-) TimerEvent: {}
+[21.740907] (-) TimerEvent: {}
+[21.843580] (-) TimerEvent: {}
+[21.948885] (-) TimerEvent: {}
+[22.057892] (-) TimerEvent: {}
+[22.167899] (-) TimerEvent: {}
+[22.228933] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/gantry_lidar_interfaces/srv/detail/capture__type_support.c.o\x1b[0m\n'}
+[22.269792] (-) TimerEvent: {}
+[22.337770] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libgantry_lidar_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[22.369929] (-) TimerEvent: {}
+[22.410057] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 64%] Built target gantry_lidar_interfaces__rosidl_typesupport_introspection_c\n'}
+[22.433842] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[22.470053] (-) TimerEvent: {}
+[22.578741] (-) TimerEvent: {}
+[22.682897] (-) TimerEvent: {}
+[22.785028] (-) TimerEvent: {}
+[22.886599] (-) TimerEvent: {}
+[22.987045] (-) TimerEvent: {}
+[23.059969] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/gantry_lidar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/gantry_lidar_interfaces/srv/capture__type_support.cpp.o\x1b[0m\n'}
+[23.087345] (-) TimerEvent: {}
+[23.187837] (-) TimerEvent: {}
+[23.291323] (-) TimerEvent: {}
+[23.394419] (-) TimerEvent: {}
+[23.495000] (-) TimerEvent: {}
+[23.596168] (-) TimerEvent: {}
+[23.700850] (-) TimerEvent: {}
+[23.803042] (-) TimerEvent: {}
+[23.905767] (-) TimerEvent: {}
+[24.006178] (-) TimerEvent: {}
+[24.111770] (-) TimerEvent: {}
+[24.212240] (-) TimerEvent: {}
+[24.261827] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libgantry_lidar_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[24.316652] (-) TimerEvent: {}
+[24.417493] (-) TimerEvent: {}
+[24.516477] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 73%] Built target gantry_lidar_interfaces__rosidl_typesupport_cpp\n'}
+[24.517603] (-) TimerEvent: {}
+[24.570494] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 73%] Built target gantry_lidar_interfaces\n'}
+[24.617758] (-) TimerEvent: {}
+[24.622864] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[24.717885] (-) TimerEvent: {}
+[24.820776] (-) TimerEvent: {}
+[24.922024] (-) TimerEvent: {}
+[25.030428] (-) TimerEvent: {}
+[25.138908] (-) TimerEvent: {}
+[25.242760] (-) TimerEvent: {}
+[25.344897] (-) TimerEvent: {}
+[25.453884] (-) TimerEvent: {}
+[25.561898] (-) TimerEvent: {}
+[25.673738] (-) TimerEvent: {}
+[25.728407] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 76%] Built target gantry_lidar_interfaces__py\n'}
+[25.775766] (-) TimerEvent: {}
+[25.795518] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/gantry_lidar_interfaces/srv/_capture_s.c.o\x1b[0m\n'}
+[25.875902] (-) TimerEvent: {}
+[25.978790] (-) TimerEvent: {}
+[26.079263] (-) TimerEvent: {}
+[26.179773] (-) TimerEvent: {}
+[26.223542] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libgantry_lidar_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[26.279904] (-) TimerEvent: {}
+[26.349148] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 82%] Built target gantry_lidar_interfaces__rosidl_generator_py\n'}
+[26.380800] (-) TimerEvent: {}
+[26.412164] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/gantry_lidar_interfaces/_gantry_lidar_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[26.480936] (-) TimerEvent: {}
+[26.582911] (-) TimerEvent: {}
+[26.686911] (-) TimerEvent: {}
+[26.696287] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[26.772561] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 88%] Built target gantry_lidar_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[26.787040] (-) TimerEvent: {}
+[26.823838] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/gantry_lidar_interfaces/_gantry_lidar_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[26.887173] (-) TimerEvent: {}
+[26.987583] (-) TimerEvent: {}
+[27.090999] (-) TimerEvent: {}
+[27.116882] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[27.191144] (-) TimerEvent: {}
+[27.238585] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 94%] Built target gantry_lidar_interfaces_s__rosidl_typesupport_c\n'}
+[27.291281] (-) TimerEvent: {}
+[27.324272] (gantry_lidar_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/gantry_lidar_interfaces/_gantry_lidar_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[27.393773] (-) TimerEvent: {}
+[27.494160] (-) TimerEvent: {}
+[27.596956] (-) TimerEvent: {}
+[27.697381] (-) TimerEvent: {}
+[27.699913] (gantry_lidar_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[27.797559] (-) TimerEvent: {}
+[27.816537] (gantry_lidar_interfaces) StdoutLine: {'line': b'[100%] Built target gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[27.855020] (gantry_lidar_interfaces) CommandEnded: {'returncode': 0}
+[27.856429] (gantry_lidar_interfaces) JobProgress: {'identifier': 'gantry_lidar_interfaces', 'progress': 'install'}
+[27.882388] (gantry_lidar_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces'], 'cwd': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'gantry_lattepanda', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/m3_robotics/gantry_control/ros/install/gantry_interfaces/lib:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera/lib:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs/lib:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/gantry_lattepanda', 'OLDPWD': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2111', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install:/home/gantry_lattepanda/realsense-ros-4.51.1/install:/home/gantry_lattepanda/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'gantry_lattepanda', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'gantry_lattepanda', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aspect-LattePanda:@/tmp/.ICE-unix/2073,unix/aspect-LattePanda:/tmp/.ICE-unix/2073', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b720cfc4_f4a5_4a60_ad16_24bddde772ef', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LD_PRELOAD': '', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.VBUJ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop:/m3_robotics/gantry_control/ros/install/gantry_interfaces:/m3_robotics/gantry_control/ros/install/gantry_cameras:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_description:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs:/home/gantry_lattepanda/ros2_ws/install/realsense2_description:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop/lib/python3.12/site-packages:/m3_robotics/gantry_control/ros/install/gantry_interfaces/lib/python3.12/site-packages:/m3_robotics/gantry_control/ros/install/gantry_cameras/lib/python3.12/site-packages:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/m3_robotics/gantry_control/ros/install/gantry_teleop:/m3_robotics/gantry_control/ros/install/gantry_interfaces:/m3_robotics/gantry_control/ros/install/gantry_cameras:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_description:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera:/home/gantry_lattepanda/realsense-ros-4.51.1/install/realsense2_camera_msgs:/home/gantry_lattepanda/ros2_ws/install/realsense2_description:/home/gantry_lattepanda/ros2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[27.897841] (-) TimerEvent: {}
+[27.925468] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[27.930844] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[27.931165] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/ament_index/resource_index/rosidl_interfaces/gantry_lidar_interfaces\n'}
+[27.961927] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/srv/Capture.json\n'}
+[27.994851] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[27.997872] (-) TimerEvent: {}
+[28.039361] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/capture.h\n'}
+[28.071870] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__functions.h\n'}
+[28.098542] (-) TimerEvent: {}
+[28.099085] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__struct.h\n'}
+[28.121308] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__type_support.h\n'}
+[28.158154] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/library_path.sh\n'}
+[28.187551] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/library_path.dsv\n'}
+[28.199755] (-) TimerEvent: {}
+[28.222808] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[28.263811] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__rosidl_typesupport_fastrtps_c.h\n'}
+[28.286736] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[28.299896] (-) TimerEvent: {}
+[28.319948] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__rosidl_typesupport_introspection_c.h\n'}
+[28.367762] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[28.387323] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/capture.hpp\n'}
+[28.400845] (-) TimerEvent: {}
+[28.414785] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__builder.hpp\n'}
+[28.451431] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__struct.hpp\n'}
+[28.471029] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__traits.hpp\n'}
+[28.492574] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__type_support.hpp\n'}
+[28.501776] (-) TimerEvent: {}
+[28.521118] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[28.554703] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.583599] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/include/gantry_lidar_interfaces/gantry_lidar_interfaces/srv/detail/capture__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.602784] (-) TimerEvent: {}
+[28.611866] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/pythonpath.sh\n'}
+[28.652184] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/pythonpath.dsv\n'}
+[28.684945] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[28.704331] (-) TimerEvent: {}
+[28.708390] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[28.756914] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[28.782779] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[28.804472] (-) TimerEvent: {}
+[28.814100] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/__init__.py\n'}
+[28.853049] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/_gantry_lidar_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[28.875516] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/_gantry_lidar_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[28.895138] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/_gantry_lidar_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[28.904606] (-) TimerEvent: {}
+[28.929558] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_c.so\n'}
+[28.965558] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[28.990690] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[29.004747] (-) TimerEvent: {}
+[29.027633] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/srv/__init__.py\n'}
+[29.059300] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/srv/_capture.py\n'}
+[29.082185] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/srv/_capture_s.c\n'}
+[29.104884] (-) TimerEvent: {}
+[29.109729] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[29.110111] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[29.110346] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/gantry_lidar_interfaces_s__rosidl_typesupport_c.so\n'}
+[29.113323] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/srv/Capture.idl\n'}
+[29.149457] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/srv/Capture.srv\n'}
+[29.175754] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/ament_index/resource_index/package_run_dependencies/gantry_lidar_interfaces\n'}
+[29.201110] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/ament_index/resource_index/parent_prefix_path/gantry_lidar_interfaces\n'}
+[29.205019] (-) TimerEvent: {}
+[29.233735] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/ament_prefix_path.sh\n'}
+[29.267094] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/ament_prefix_path.dsv\n'}
+[29.291904] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/path.sh\n'}
+[29.305165] (-) TimerEvent: {}
+[29.323197] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/environment/path.dsv\n'}
+[29.350648] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/local_setup.bash\n'}
+[29.375312] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/local_setup.sh\n'}
+[29.396819] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/local_setup.zsh\n'}
+[29.405308] (-) TimerEvent: {}
+[29.418268] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/local_setup.dsv\n'}
+[29.440772] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/package.dsv\n'}
+[29.461896] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/ament_index/resource_index/packages/gantry_lidar_interfaces\n'}
+[29.482528] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[29.505383] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[29.505697] (-) TimerEvent: {}
+[29.533608] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[29.556663] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[29.580546] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[29.600622] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[29.605992] (-) TimerEvent: {}
+[29.622348] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[29.643837] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfacesConfig.cmake\n'}
+[29.666018] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfacesConfig-version.cmake\n'}
+[29.691377] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/package.xml\n'}
+[29.706133] (-) TimerEvent: {}
+[29.713011] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_generator_c.so\n'}
+[29.713349] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_generator_c.so" to ""\n'}
+[29.713521] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[29.717898] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[29.718411] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[29.718620] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[29.719507] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_c.so\n'}
+[29.721867] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[29.722148] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[29.722481] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[29.725532] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[29.725842] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[29.726035] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_cpp.so\n'}
+[29.726209] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[29.806271] (-) TimerEvent: {}
+[29.822760] (gantry_lidar_interfaces) StdoutLine: {'line': b"Listing '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces'...\n"}
+[29.823106] (gantry_lidar_interfaces) StdoutLine: {'line': b"Compiling '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/__init__.py'...\n"}
+[29.823302] (gantry_lidar_interfaces) StdoutLine: {'line': b"Listing '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/srv'...\n"}
+[29.823478] (gantry_lidar_interfaces) StdoutLine: {'line': b"Compiling '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/srv/__init__.py'...\n"}
+[29.823733] (gantry_lidar_interfaces) StdoutLine: {'line': b"Compiling '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/python3.12/site-packages/gantry_lidar_interfaces/srv/_capture.py'...\n"}
+[29.839998] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_generator_py.so\n'}
+[29.841104] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/lib/libgantry_lidar_interfaces__rosidl_generator_py.so" to ""\n'}
+[29.841498] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_generator_cExport.cmake\n'}
+[29.841777] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[29.842136] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[29.842482] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[29.842893] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[29.843619] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[29.844383] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[29.844596] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[29.846042] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_generator_cppExport.cmake\n'}
+[29.851040] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[29.851927] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[29.852088] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[29.852257] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[29.852433] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[29.852605] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/gantry_lidar_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[29.854573] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_generator_pyExport.cmake\n'}
+[29.854773] (gantry_lidar_interfaces) StdoutLine: {'line': b'-- Installing: /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces/share/gantry_lidar_interfaces/cmake/export_gantry_lidar_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[29.860001] (gantry_lidar_interfaces) CommandEnded: {'returncode': 0}
+[29.908756] (-) TimerEvent: {}
+[29.969231] (gantry_lidar_interfaces) JobEnded: {'identifier': 'gantry_lidar_interfaces', 'rc': 0}
+[29.971331] (-) EventReactorShutdown: {}

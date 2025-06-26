@@ -1,0 +1,36 @@
+[0.098s] Invoking command in '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_services:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidar_interfaces -DCMAKE_INSTALL_PREFIX=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces
+[0.409s] -- The C compiler identification is GNU 13.3.0
+[0.565s] -- The CXX compiler identification is GNU 13.3.0
+[0.605s] -- Detecting C compiler ABI info
+[0.865s] -- Detecting C compiler ABI info - done
+[0.934s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.944s] -- Detecting C compile features
+[0.944s] -- Detecting C compile features - done
+[1.009s] -- Detecting CXX compiler ABI info
+[1.369s] -- Detecting CXX compiler ABI info - done
+[1.411s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.413s] -- Detecting CXX compile features
+[1.415s] -- Detecting CXX compile features - done
+[1.443s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.957s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.432s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[2.432s]   By not providing "Findrosidl_generate_interfaces.cmake" in
+[2.443s]   CMAKE_MODULE_PATH this project has asked CMake to find a package
+[2.447s]   configuration file provided by "rosidl_generate_interfaces", but CMake did
+[2.448s]   not find one.
+[2.453s] 
+[2.453s]   Could not find a package configuration file provided by
+[2.453s]   "rosidl_generate_interfaces" with any of the following names:
+[2.453s] 
+[2.454s] -- Configuring incomplete, errors occurred!
+[2.454s]     rosidl_generate_interfacesConfig.cmake
+[2.456s]     rosidl_generate_interfaces-config.cmake
+[2.457s] 
+[2.457s]   Add the installation prefix of "rosidl_generate_interfaces" to
+[2.458s]   CMAKE_PREFIX_PATH or set "rosidl_generate_interfaces_DIR" to a directory
+[2.458s]   containing one of the above files.  If "rosidl_generate_interfaces"
+[2.458s]   provides a separate development package or SDK, be sure it has been
+[2.461s]   installed.
+[2.461s] 
+[2.461s] [0m
+[2.462s] Invoked command in '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_services:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidar_interfaces -DCMAKE_INSTALL_PREFIX=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces

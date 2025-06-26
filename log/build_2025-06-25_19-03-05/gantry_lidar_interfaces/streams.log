@@ -1,0 +1,23 @@
+[0.072s] Invoking command in '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_services:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidar_interfaces -DCMAKE_INSTALL_PREFIX=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces
+[0.129s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.801s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.802s]   By not providing "Findrosidl_generate_interfaces.cmake" in
+[0.804s]   CMAKE_MODULE_PATH this project has asked CMake to find a package
+[0.805s]   configuration file provided by "rosidl_generate_interfaces", but CMake did
+[0.807s]   not find one.
+[0.808s] 
+[0.809s]   Could not find a package configuration file provided by
+[0.809s]   "rosidl_generate_interfaces" with any of the following names:
+[0.811s] 
+[0.811s]     rosidl_generate_interfacesConfig.cmake
+[0.811s]     rosidl_generate_interfaces-config.cmake
+[0.811s] 
+[0.812s]   Add the installation prefix of "rosidl_generate_interfaces" to
+[0.815s]   CMAKE_PREFIX_PATH or set "rosidl_generate_interfaces_DIR" to a directory
+[0.815s]   containing one of the above files.  If "rosidl_generate_interfaces"
+[0.815s]   provides a separate development package or SDK, be sure it has been
+[0.815s]   installed.
+[0.816s] 
+[0.816s] [0m
+[0.816s] -- Configuring incomplete, errors occurred!
+[1.082s] Invoked command in '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_services:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidar_interfaces -DCMAKE_INSTALL_PREFIX=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidar_interfaces

@@ -1,0 +1,37 @@
+[3.700s] Invoking command in '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidars': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gantry_lidars build --build-base /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build install --record /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/install.log --single-version-externally-managed install_data
+[4.595s] running egg_info
+[4.599s] creating ../../build/gantry_lidars/gantry_lidars.egg-info
+[4.669s] writing ../../build/gantry_lidars/gantry_lidars.egg-info/PKG-INFO
+[4.669s] writing dependency_links to ../../build/gantry_lidars/gantry_lidars.egg-info/dependency_links.txt
+[4.669s] writing entry points to ../../build/gantry_lidars/gantry_lidars.egg-info/entry_points.txt
+[4.672s] writing requirements to ../../build/gantry_lidars/gantry_lidars.egg-info/requires.txt
+[4.674s] writing top-level names to ../../build/gantry_lidars/gantry_lidars.egg-info/top_level.txt
+[4.676s] writing manifest file '../../build/gantry_lidars/gantry_lidars.egg-info/SOURCES.txt'
+[4.817s] reading manifest file '../../build/gantry_lidars/gantry_lidars.egg-info/SOURCES.txt'
+[4.818s] writing manifest file '../../build/gantry_lidars/gantry_lidars.egg-info/SOURCES.txt'
+[4.820s] running build
+[4.823s] running build_py
+[4.823s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build
+[4.823s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build/lib
+[4.825s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build/lib/gantry_lidars
+[4.825s] copying gantry_lidars/PointCloudMerger.py -> /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build/lib/gantry_lidars
+[4.825s] copying gantry_lidars/__init__.py -> /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build/lib/gantry_lidars
+[4.825s] running install
+[4.837s] running install_lib
+[4.911s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages/gantry_lidars
+[4.913s] copying /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build/lib/gantry_lidars/PointCloudMerger.py -> /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages/gantry_lidars
+[4.914s] copying /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build/lib/gantry_lidars/__init__.py -> /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages/gantry_lidars
+[4.916s] byte-compiling /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages/gantry_lidars/PointCloudMerger.py to PointCloudMerger.cpython-312.pyc
+[4.918s] byte-compiling /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages/gantry_lidars/__init__.py to __init__.cpython-312.pyc
+[4.919s] running install_data
+[4.921s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/share/ament_index
+[4.921s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/share/ament_index/resource_index
+[4.922s] creating /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/share/ament_index/resource_index/packages
+[4.922s] copying resource/gantry_lidars -> /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/share/ament_index/resource_index/packages
+[4.922s] copying package.xml -> /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/share/gantry_lidars
+[4.923s] running install_egg_info
+[4.998s] Copying ../../build/gantry_lidars/gantry_lidars.egg-info to /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages/gantry_lidars-0.0.0-py3.12.egg-info
+[5.003s] running install_scripts
+[5.449s] Installing gantry_lidars script to /home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/gantry_lidars
+[5.451s] writing list of installed files to '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/install.log'
+[5.563s] Invoked command in '/home/gantry_lattepanda/Ryan_ws/gantry_lidars/src/gantry_lidars' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gantry_lattepanda/Ryan_ws/gantry_lidars/install/gantry_lidars/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gantry_lidars build --build-base /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/build install --record /home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidars/install.log --single-version-externally-managed install_data

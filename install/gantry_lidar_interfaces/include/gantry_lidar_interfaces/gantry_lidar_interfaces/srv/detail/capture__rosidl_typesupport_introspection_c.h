@@ -1,0 +1,1 @@
+/home/gantry_lattepanda/Ryan_ws/gantry_lidars/build/gantry_lidar_interfaces/rosidl_typesupport_introspection_c/gantry_lidar_interfaces/srv/detail/capture__rosidl_typesupport_introspection_c.h
