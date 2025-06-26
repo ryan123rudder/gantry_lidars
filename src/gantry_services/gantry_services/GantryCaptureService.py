@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger
-from gantry_services.srv import String
+from gantry_services.srv import Capture
 import subprocess # For running ROS bag commands
 import signal # For sending shutdown sig
 import shutil
@@ -32,15 +32,15 @@ class GantryCaptureService(Node):
         self.create_service(Trigger, 'info', self.info_callback)
         
         # Capture sensor data
-        self.create_service(String, 'capture', self.capture_callback)
+        self.create_service(Capture, 'capture', self.capture_callback)
 
         # Download
-        self.create_service(String, 'download/name', self.download_name_callback)
-        self.create_service(String, 'download/timeRange', self.download_time_range_callback)
+        self.create_service(Capture, 'download/name', self.download_name_callback)
+        self.create_service(Capture, 'download/timeRange', self.download_time_range_callback)
 
         # Delete
-        self.create_service(String, 'delete/name', self.delete_name_callback)
-        self.create_service(String, 'delete/timeRange', self.delete_time_range_callback)
+        self.create_service(Capture, 'delete/name', self.delete_name_callback)
+        self.create_service(Capture, 'delete/timeRange', self.delete_time_range_callback)
         
         # Start HTTP server
         self.start_http_server()
