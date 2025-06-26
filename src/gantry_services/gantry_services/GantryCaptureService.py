@@ -29,18 +29,18 @@ class GantryCaptureService(Node):
         super().__init__('gantry_capture_service')
 
         # Info
-        self.create_service(Trigger, 'info', self.info_callback)
+        self.create_service(Trigger, 'gantry_capture_service/info', self.info_callback)
         
         # Capture sensor data
-        self.create_service(Capture, 'capture', self.capture_callback)
+        self.create_service(Capture, 'gantry_capture_service/capture', self.capture_callback)
 
         # Download
-        self.create_service(DownloadName, 'download/name', self.download_name_callback)
-        self.create_service(DownloadTimeRange, 'download/timeRange', self.download_time_range_callback)
+        self.create_service(DownloadName, 'gantry_capture_service/download/name', self.download_name_callback)
+        self.create_service(DownloadTimeRange, 'gantry_capture_service/download/timeRange', self.download_time_range_callback)
 
         # Delete
-        self.create_service(DeleteName, 'delete/name', self.delete_name_callback)
-        self.create_service(DeleteTimeRange, 'delete/timeRange', self.delete_time_range_callback)
+        self.create_service(DeleteName, 'gantry_capture_service/delete/name', self.delete_name_callback)
+        self.create_service(DeleteTimeRange, 'gantry_capture_service/delete/timeRange', self.delete_time_range_callback)
         
         # Start HTTP server
         start_http_server()
@@ -139,7 +139,7 @@ class GantryCaptureService(Node):
             # Figure out what the http path to the zip is
             folder = matches[0].name
             ip = "192.168.2.4"
-            url = f"http://{ip}:8000/{folder}.zip"
+            url = f"http://{ip}:8000/{folder}"
 
             # Return the zip path for wget by client
             response.outdata = json.dumps({
