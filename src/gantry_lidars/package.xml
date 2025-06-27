@@ -4,7 +4,7 @@
   <name>gantry_lidars</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="mkreed@mines.edu">gantry_lattepanda</maintainer>
+  <maintainer email="ryanmanley@mines.edu">gantry_lattepanda</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>

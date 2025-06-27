@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
 		'gantry_lidars = gantry_lidars.PointCloudMerger:main'
+        'lidar_watchdog = gantry_lidars.lidar_watchdog:main'
         ],
     },
 )
