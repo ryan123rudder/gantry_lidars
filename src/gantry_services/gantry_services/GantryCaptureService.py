@@ -115,7 +115,7 @@ class GantryCaptureService(Node):
                 "status": "ACK",
                 "duration": duration,
                 "sensors": sensors,
-                "outname": outname
+                "outname": self.filename
             })
 
         except Exception as e:
@@ -133,6 +133,7 @@ class GantryCaptureService(Node):
             # Get matches (Should only have one)
             matches = sorted(DATA_DIR.glob(f"{outname}"), reverse=True)
             if not matches:
+                self.get_logger().info(f"Download name request failed, file not found.")
                 response.outdata = json.dumps({"success": False, "error": "Not found"})
                 return response
 
@@ -140,6 +141,8 @@ class GantryCaptureService(Node):
             folder = matches[0].name
             ip = "192.168.2.4"
             url = f"http://{ip}:8000/{folder}"
+
+            self.get_logger().info(f"Download name request with: {url}")
 
             # Return the zip path for wget by client
             response.outdata = json.dumps({
@@ -160,7 +163,6 @@ class GantryCaptureService(Node):
             #data = json.loads(request.data)
             start = request.start #data.get("start")
             end = request.end #data.get("end")
-            # EXECUTE DOWNLOAD (DO THIS IN A BATCH, ZIP ZIPs TOGETHER)
             response.outdata = f"Downloaded files from {start} to {end}"
         except Exception as e:
             response.outdata = f"Error parsing request: {str(e)}"
@@ -194,6 +196,9 @@ class GantryCaptureService(Node):
                 if path.is_dir():
                     shutil.rmtree(path)
                     deleted.append(path.name)
+
+            self.get_logger().info(f"Deleted {outname}")
+                
 
             response.outdata = json.dumps({
                 "success": True,
