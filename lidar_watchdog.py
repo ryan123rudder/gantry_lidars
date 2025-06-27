@@ -9,9 +9,6 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import PointCloud2
 
-# Adjust these to match your package and launch file
-PACKAGE_NAME = 'my_package'
-LAUNCH_FILE = 'multi_l515.launch.py'
 
 # How long (in seconds) to tolerate a silent camera before reset
 STALE_TIMEOUT = 2.0
@@ -22,12 +19,6 @@ CAMERAS = {
     'l515_west':   {'topic': '/l515_west/depth/color/points',   'last_msg': None},
     'l515_east':   {'topic': '/l515_east/depth/color/points',   'last_msg': None},
 }
-
-# def spawn_launch():
-#     """Start the ROS2 launch file as a subprocess."""
-#     cmd = ['ros2', 'launch', PACKAGE_NAME, LAUNCH_FILE]
-#     # start in its own process group so we can kill all children if needed
-#     return subprocess.Popen(cmd, preexec_fn=os.setsid)
 
 class TopicMonitor(Node):
     def __init__(self):
