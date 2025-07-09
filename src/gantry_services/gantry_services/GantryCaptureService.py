@@ -85,7 +85,8 @@ class GantryCaptureService(Node):
             topics = []
             for sensor in sensors:
                 if (sensor == "l515_center") or (sensor == "l515_west") or (sensor == "l515_east"):
-                    topics.append("/"+sensor+"/depth/color/points")
+                    topics.append("/"+sensor+"/aligned_depth_to_color/image_raw")
+                    topics.append("/"+sensor+"/color/image_raw")
 
             # Capture Bag
             bag_path = (DATA_DIR / self.filename).resolve()

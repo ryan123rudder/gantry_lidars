@@ -1,50 +1,56 @@
-// License: Apache 2.0. See LICENSE file in root directory.
-// Copyright(c) 2019 Intel Corporation. All Rights Reserved.
+#include <librealsense2/rs.hpp>
+#include <iostream>
+#include <chrono>
 
-#include <librealsense2/rs.hpp> // Include RealSense Cross Platform API
-#include <iostream>             // for cout
-
-// Hello RealSense example demonstrates the basics of connecting to a RealSense device
-// and taking advantage of depth data
 int main(int argc, char * argv[]) try
 {
-    // Create a Pipeline - this serves as a top-level API for streaming and processing frames
-    rs2::pipeline p;
+    rs2::pipeline pipe;
 
-    // Configure and start the pipeline
-    p.start();
+    rs2::config cfg;
+    cfg.enable_stream(RS2_STREAM_DEPTH, 640, 480, RS2_FORMAT_Z16, 30);
+    cfg.enable_stream(RS2_STREAM_COLOR, 640, 480, RS2_FORMAT_RGB8, 30);
 
-    while (true)
+    pipe.start(cfg);
+
+    // Time tracking for FPS
+    auto start_time = std::chrono::high_resolution_clock::now();
+    int frame_count = 0;
+
+    for (int i = 0; i < 100; ++i) 
     {
-        // Block program until frames arrive
-        rs2::frameset frames = p.wait_for_frames();
-
-        // Try to get a frame of a depth image
+        rs2::frameset frames = pipe.wait_for_frames();
         rs2::depth_frame depth = frames.get_depth_frame();
         rs2::video_frame color = frames.get_color_frame();
 
-        // Get the depth frame's dimensions
-        auto width = depth.get_width();
-        auto height = depth.get_height();
+        int depth_width = depth.get_width();
+        int depth_height = depth.get_height();
+        float center_distance = depth.get_distance(depth_width / 2, depth_height / 2);
 
-        auto width_c = color.get_width();
-        auto height_c = color.get_height();
+        int color_width = color.get_width();
+        int color_height = color.get_height();
 
-        // Query the distance from the camera to the object in the center of the image
-        float dist_to_center = depth.get_distance(width / 2, height / 2);
+        frame_count++;
 
-        // Print the distance
-        std::cout << "The camera is facing an object " << dist_to_center << " meters away. Depth frame: " << width << "x" << height <<" | Color frame: " << width_c << "x" << height_c <<" \r";
+        // Calculate elapsed time every frame
+        auto now = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed = now - start_time;
+        double fps = frame_count / elapsed.count();
+
+        std::cout << "Frame " << frame_count
+                  << ": Depth: " << depth_width << "x" << depth_height
+                  << ", Color: " << color_width << "x" << color_height
+                  << ", Approx. FPS: " << fps
+                  << std::endl;
     }
 
     return EXIT_SUCCESS;
 }
 catch (const rs2::error & e)
 {
-    std::cerr << "RealSense error calling " << e.get_failed_function() << "(" << e.get_failed_args() << "):\n    " << e.what() << std::endl;
+    std::cerr << "RealSense error: " << e.what() << std::endl;
     return EXIT_FAILURE;
 }
-catch (const std::exception& e)
+catch (const std::exception & e)
 {
     std::cerr << e.what() << std::endl;
     return EXIT_FAILURE;
