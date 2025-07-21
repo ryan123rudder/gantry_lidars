@@ -10,7 +10,7 @@ def load_tf_args_from_yaml(yaml_path, child_frame):
     T = np.array(data['Transform']['T']).flatten()
     R_matrix = np.array(data['Transform']['R'])
     rot = R.from_matrix(R_matrix)
-    roll, pitch, yaw = rot.as_euler('xyz', degrees=False)
+    yaw, pitch, roll = rot.as_euler('xyz', degrees=False)
 
     return [*T, roll, pitch, yaw, 'base_link', child_frame]
 
@@ -34,3 +34,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+#Colored ICP
