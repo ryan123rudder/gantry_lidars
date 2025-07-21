@@ -254,3 +254,36 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+
+
+"""
+TODO
+- Troubleshoot LiDAR
+    - Poke around and getting them working again
+- Gather throughput measurements
+    - Latte Panda LiDAR (single with two not launched), do we see bandwidth issues. 
+    - ROS w/ 1 LiDAR, 3 LiDAR
+    - Realsense SDK w/ 1 LiDAR, 3 LiDAR
+    - Measure with wireshark or something like that (USB Top) ( measuring usb ? )
+    - Vary depth resolution, fps (30fps & 15fps & whatever else) Depth and color
+    - Get quantitatify measurements
+    - Hardware sync
+    - Looking at dropped frames
+- Investigate hardware sync
+- lidar calibration (color data also needs calibration if possible?) (bonus)
+
+! NOTES
+- Ultimately we make the sdk pull data and write our own publisher.
+- USB C direction affects to bandwidth
+- Figure out HOW im going to do bandwidth measurement
+
+? What all should I put in the matrix
+- 15 and 30 fps, various res
+- Two tables, one with HW sync and one without
+
+? Is the matrix all depth + color
+- Look at point clouds, but focus on depth and color
+- Find out if it happens on chip
+
+"""
